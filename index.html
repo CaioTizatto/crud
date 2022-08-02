@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ablueble</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--botão de filtro-->
+    <div class="dropdown">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Filtros
+        </a>
+      
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </div>
+  </div>
+
+  <!-------------------------------tabela principal-->
+
+    <table class="table" id="table">
+        <thead>
+          <tr>
+            <th  scope="col">GTIN</th>
+            <th scope="col">Descrição</th>
+            <th scope="col">Categoria</th>
+            <th scope="col">Preço Promocional</th>
+            <th scope="col">Preço Regular</th>
+            <th scope="col"> Inicio da promoção</th>
+            <th scope="col">Fim da promoção</th>
+            <th>Alterar</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>012345678591234</td>
+            <td>heineken</td>
+            <td>Cervejas</td>
+            <td>5,50</td>
+            <td>9,90</td>
+            <td>15/08/2022</td>
+            <td>20/08/2022</td>
+            <td><img src="icon/editar.png" alt="ícone de editar"> <img src="icon/excluir.png" alt="icone de editar"></td>
+          </tr>
+         
+         
+        </tbody>
+      </table>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Novo Registro
+      </button>
+      
+      <!--------------------------- Modal novo registro -->
+
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Novo Registro</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <span>GTIN <input type="number"  name=""   id="GTIN"></span>
+              <span>Descrição Completa <input type="text" maxlength="100" name="" id="descricao"> </span>
+              <span>
+                Categoria <select name="descricao" id="Categoria">
+                  <option value=""></option>
+                  <option value="">Eletrônicos</option>
+                  <option value="">Bebidas</option>
+                  <option value="">Cervejas</option>
+                </select>
+              </span>
+              <span>Preço Promocional <input type="tel" name="" id="precoPromocional"></span>
+              <span>Preço Regular <input type="tel" name="" id="precoRegular"></span>
+              <span>Inicio da promoção <input type="date" name="" id="inicioPromocao" ></span>
+              <span>Fim da promoção <input type="date" name="" id="fimPromocao"></span>
+                
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+              <button type="button" class="btn btn-primary" onclick="novoRegistro()">Salvar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+     
+
+
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+    
+</body>
+</html>
